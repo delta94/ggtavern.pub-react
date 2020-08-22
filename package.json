@@ -49,6 +49,13 @@
     ]
   },
   "jest": {
+    "collectCoverageFrom": [
+      "**/*.{ts,tsx}",
+      "!**/node_modules/**",
+      "!**/coverage/**",
+      "!**/serviceWorker.ts",
+      "!**/index.ts"
+    ],
     "coverageThreshold": {
       "global": {
         "branches": 30,
