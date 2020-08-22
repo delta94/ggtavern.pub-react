@@ -2,6 +2,7 @@ import React from 'react';
 import NavbarComponent from 'app/core/NavbarComponent';
 import ContactComponent from 'app/components/ContactComponent';
 import LoveComponent from 'app/components/LoveComponent';
+import NotFoundComponent from 'app/NotFoundComponent';
 
 import { ThemeProvider, CssBaseline } from '@material-ui/core';
 import { darkTheme } from './theme';
@@ -23,6 +24,9 @@ export default function App() {
             <ContactComponent></ContactComponent>
           </Route>
           <Redirect exact path='/' to='/home' />
+          <Route path='*'>
+            <NotFoundComponent></NotFoundComponent>
+          </Route>
         </Switch>
       </Router>
     </ThemeProvider>
