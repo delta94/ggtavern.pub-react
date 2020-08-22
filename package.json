@@ -54,6 +54,7 @@
       "!**/node_modules/**",
       "!**/coverage/**",
       "!**/serviceWorker.ts",
+      "!**/*.d.ts",
       "!**/index.ts"
     ],
     "coverageThreshold": {
