@@ -10,5 +10,12 @@ export const darkTheme = createMuiTheme({
     },
     type: 'dark',
   },
-  overrides: {},
 });
+
+darkTheme.overrides = {
+  MuiLink: {
+    root: {
+      color: darkTheme.palette.primary.main,
+    }
+  }
+}
