@@ -36,7 +36,7 @@ const useStyles = makeStyles({
   },
 });
 
-function LoveComponent() {
+export default function LoveComponent() {
   const classes = useStyles();
   const theme = useTheme();
   const isLarger = useMediaQuery(theme.breakpoints.up('md'));
@@ -74,6 +74,7 @@ function GridComponent() {
     </div>
   );
 }
+
 function MobileComponent() {
   const classes = useStyles();
 
@@ -97,5 +98,3 @@ function MobileComponent() {
     </div>
   );
 }
-
-export default LoveComponent;

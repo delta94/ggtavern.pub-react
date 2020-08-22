@@ -30,7 +30,7 @@ const useStyles = makeStyles({
   },
 });
 
-function ContactComponent() {
+export default function ContactComponent() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -104,5 +104,3 @@ function ContactComponent() {
     </div>
   );
 }
-
-export default ContactComponent;

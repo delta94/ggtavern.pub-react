@@ -6,7 +6,7 @@ import HomeIcon from '@material-ui/icons/Home';
 
 import useStyles from './NavbarStyles';
 
-function NavbarComponent() {
+export default function NavbarComponent() {
   const classes = useStyles();
   return (
     <nav className={classes.root}>
@@ -34,5 +34,3 @@ function NavbarComponent() {
     </nav>
   );
 }
-
-export default NavbarComponent;

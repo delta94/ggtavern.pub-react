@@ -8,7 +8,7 @@ import { darkTheme } from './theme';
 import { Router, Route, Redirect, Switch } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 
-function App() {
+export default function App() {
   const history = createBrowserHistory({ basename: process.env.PUBLIC_URL });
   return (
     <ThemeProvider theme={darkTheme}>
@@ -19,14 +19,12 @@ function App() {
           <Route path='/home'>
             <LoveComponent></LoveComponent>
           </Route>
-          <Redirect exact path='/' to='/home' />
           <Route path='/contact'>
             <ContactComponent></ContactComponent>
           </Route>
+          <Redirect exact path='/' to='/home' />
         </Switch>
       </Router>
     </ThemeProvider>
   );
 }
-
-export default App;
