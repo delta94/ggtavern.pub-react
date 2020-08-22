@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/ggtavern.pub-react/static/css/main.25b16216.chunk.css",
-    "main.js": "/ggtavern.pub-react/static/js/main.cade4f25.chunk.js",
-    "main.js.map": "/ggtavern.pub-react/static/js/main.cade4f25.chunk.js.map",
+    "main.css": "/ggtavern.pub-react/static/css/main.843892a3.chunk.css",
+    "main.js": "/ggtavern.pub-react/static/js/main.46275584.chunk.js",
+    "main.js.map": "/ggtavern.pub-react/static/js/main.46275584.chunk.js.map",
     "runtime-main.js": "/ggtavern.pub-react/static/js/runtime-main.997f234b.js",
     "runtime-main.js.map": "/ggtavern.pub-react/static/js/runtime-main.997f234b.js.map",
-    "static/js/2.13dfe24e.chunk.js": "/ggtavern.pub-react/static/js/2.13dfe24e.chunk.js",
-    "static/js/2.13dfe24e.chunk.js.map": "/ggtavern.pub-react/static/js/2.13dfe24e.chunk.js.map",
+    "static/js/2.b2ac5236.chunk.js": "/ggtavern.pub-react/static/js/2.b2ac5236.chunk.js",
+    "static/js/2.b2ac5236.chunk.js.map": "/ggtavern.pub-react/static/js/2.b2ac5236.chunk.js.map",
     "index.html": "/ggtavern.pub-react/index.html",
-    "precache-manifest.2e225c11cd8ae166bc36d2c0fc2fc663.js": "/ggtavern.pub-react/precache-manifest.2e225c11cd8ae166bc36d2c0fc2fc663.js",
+    "precache-manifest.2774dfa436da3267c4961a175a751fa3.js": "/ggtavern.pub-react/precache-manifest.2774dfa436da3267c4961a175a751fa3.js",
     "service-worker.js": "/ggtavern.pub-react/service-worker.js",
-    "static/css/main.25b16216.chunk.css.map": "/ggtavern.pub-react/static/css/main.25b16216.chunk.css.map",
-    "static/js/2.13dfe24e.chunk.js.LICENSE.txt": "/ggtavern.pub-react/static/js/2.13dfe24e.chunk.js.LICENSE.txt",
-    "static/media/construction.png": "/ggtavern.pub-react/static/media/construction.c28113ab.png"
+    "static/css/main.843892a3.chunk.css.map": "/ggtavern.pub-react/static/css/main.843892a3.chunk.css.map",
+    "static/js/2.b2ac5236.chunk.js.LICENSE.txt": "/ggtavern.pub-react/static/js/2.b2ac5236.chunk.js.LICENSE.txt",
+    "static/media/construction.png": "/ggtavern.pub-react/static/media/construction.c28113ab.png",
+    "static/media/ggTavern.png": "/ggtavern.pub-react/static/media/ggTavern.f8b7f62b.png"
   },
   "entrypoints": [
     "static/js/runtime-main.997f234b.js",
-    "static/js/2.13dfe24e.chunk.js",
-    "static/css/main.25b16216.chunk.css",
-    "static/js/main.cade4f25.chunk.js"
+    "static/js/2.b2ac5236.chunk.js",
+    "static/css/main.843892a3.chunk.css",
+    "static/js/main.46275584.chunk.js"
   ]
 }
