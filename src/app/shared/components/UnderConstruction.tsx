@@ -1,10 +1,18 @@
 import React from 'react';
-import './UnderConstruction.scss';
 import img from 'assets/construction.png';
+import { makeStyles } from '@material-ui/core';
+
+const useStyles = makeStyles({
+  container: {
+    textAlign: 'center',
+    fontFamily: '"Press Start 2P"',
+  },
+});
 
 export default function UnderConstructionComponent(props: { title?: string }) {
+  const classes = useStyles();
   return (
-    <div className='container'>
+    <div className={classes.container}>
       <h2>{props?.title}</h2>
       <h3>This page is currently under construction.</h3>
       <img
