@@ -27,6 +27,7 @@ const navbarStyles = makeStyles(theme => ({
         marginTop: 'auto',
         marginBottom: 'auto',
         marginLeft: '0.5em',
+        textTransform: 'initial'
     },
     active: {
         backgroundColor: theme.palette.primary.main,

@@ -25,11 +25,11 @@ function NavbarComponent() {
         <HomeIcon />
       </IconButton>
       <Button
-        to='/about'
+        to='/contact'
         className={classes.navLink}
         activeClassName={classes.active}
         component={NavLink}>
-        About Us
+        Contact Us
       </Button>
     </nav>
   );
