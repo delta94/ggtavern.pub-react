@@ -1,8 +1,8 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
-import { unmountComponentAtNode } from 'react-dom';
+import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
+import Navbar from './NavbarComponent';
+import { MemoryRouter } from 'react-router-dom';
 
 let container: HTMLDivElement = null;
 beforeEach(() => {
@@ -18,8 +18,16 @@ afterEach(() => {
   container = null;
 });
 
-test('renders', () => {
+it('renders', () => {
   act(() => {
-    render(<App />, container);
+    render(
+      <>
+        <MemoryRouter>
+          <Navbar />
+        </MemoryRouter>
+      </>,
+      container
+    );
   });
+  expect(container).toBeDefined();
 });
