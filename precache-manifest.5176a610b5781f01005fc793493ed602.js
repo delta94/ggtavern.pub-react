@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5e7531b869115c43f37cfee7fb4efe93",
+    "revision": "3e64065eeab2dc5c1a50954a7e88f76c",
     "url": "/ggtavern.pub-react/index.html"
   },
   {
-    "revision": "8e2afcea5cb2c34442a9",
+    "revision": "abb2c0f22e0c6cd13b61",
     "url": "/ggtavern.pub-react/static/css/main.843892a3.chunk.css"
   },
   {
-    "revision": "f6a44b094d9163d6a533",
-    "url": "/ggtavern.pub-react/static/js/2.b2ac5236.chunk.js"
+    "revision": "514a61a8c3fc90ad15e2",
+    "url": "/ggtavern.pub-react/static/js/2.0ca9ebec.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/ggtavern.pub-react/static/js/2.b2ac5236.chunk.js.LICENSE.txt"
+    "url": "/ggtavern.pub-react/static/js/2.0ca9ebec.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8e2afcea5cb2c34442a9",
-    "url": "/ggtavern.pub-react/static/js/main.46275584.chunk.js"
+    "revision": "abb2c0f22e0c6cd13b61",
+    "url": "/ggtavern.pub-react/static/js/main.61a86ae5.chunk.js"
   },
   {
     "revision": "00c8c616639cd075678e",
     "url": "/ggtavern.pub-react/static/js/runtime-main.997f234b.js"
   },
   {
-    "revision": "c28113ab185a4c850020161d6bbc29e3",
-    "url": "/ggtavern.pub-react/static/media/construction.c28113ab.png"
+    "revision": "33c8e4edd1bcb15a12fcbbb98ab5c474",
+    "url": "/ggtavern.pub-react/static/media/ggMask.33c8e4ed.jpg"
   },
   {
     "revision": "f8b7f62b5d788e89f272669b6688b864",
