@@ -1,10 +1,11 @@
 import React from 'react';
-import UnderConstruction from 'app/shared/components/UnderConstruction';
 import NavbarComponent from 'app/core/NavbarComponent';
+import ContactComponent from 'app/components/ContactComponent';
+import LoveComponent from 'app/components/LoveComponent';
 
 import { ThemeProvider, CssBaseline } from '@material-ui/core';
 import { darkTheme } from './theme';
-import { Router, Route, Redirect } from 'react-router-dom';
+import { Router, Route, Redirect, Switch } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 
 function App() {
@@ -14,13 +15,15 @@ function App() {
       <CssBaseline />
       <Router history={history}>
         <NavbarComponent />
-        <Route path='/home'>
-          <UnderConstruction title='Grinning Goblin Gaming Tavern'></UnderConstruction>
-        </Route>
-        <Route path='/about'>
-          <UnderConstruction title='About Us'></UnderConstruction>
-        </Route>
-        <Redirect exact path='/' to='/home' />
+        <Switch>
+          <Route path='/home'>
+            <LoveComponent></LoveComponent>
+          </Route>
+          <Redirect exact path='/' to='/home' />
+          <Route path='/contact'>
+            <ContactComponent></ContactComponent>
+          </Route>
+        </Switch>
       </Router>
     </ThemeProvider>
   );
