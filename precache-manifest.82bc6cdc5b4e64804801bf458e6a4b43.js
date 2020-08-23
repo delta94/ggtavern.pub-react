@@ -1,27 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c17082d4ea5203b85d04a101df3bc4af",
+    "revision": "e445b26a4a9272e7950f2e8fbf06417d",
     "url": "/ggtavern.pub-react/index.html"
   },
   {
-    "revision": "67d14de1bd1e5b6a0874",
-    "url": "/ggtavern.pub-react/static/css/2.1a0a2c47.chunk.css"
+    "revision": "e079d91f4c1fbc23545f",
+    "url": "/ggtavern.pub-react/static/css/main.086aac13.chunk.css"
   },
   {
-    "revision": "ed96b7d76209c376fa9a",
-    "url": "/ggtavern.pub-react/static/css/main.5bba4c07.chunk.css"
-  },
-  {
-    "revision": "67d14de1bd1e5b6a0874",
-    "url": "/ggtavern.pub-react/static/js/2.693fcaa9.chunk.js"
+    "revision": "fa2ad68535c194b1781d",
+    "url": "/ggtavern.pub-react/static/js/2.63b02376.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/ggtavern.pub-react/static/js/2.693fcaa9.chunk.js.LICENSE.txt"
+    "url": "/ggtavern.pub-react/static/js/2.63b02376.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ed96b7d76209c376fa9a",
-    "url": "/ggtavern.pub-react/static/js/main.6355f14c.chunk.js"
+    "revision": "e079d91f4c1fbc23545f",
+    "url": "/ggtavern.pub-react/static/js/main.df6cb4c7.chunk.js"
   },
   {
     "revision": "00c8c616639cd075678e",
@@ -36,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ggtavern.pub-react/static/media/gg1.8664d930.jpg"
   },
   {
-    "revision": "a2fa89f66a5e1a9096693bfdc51f55ad",
-    "url": "/ggtavern.pub-react/static/media/gg10.a2fa89f6.jpg"
+    "revision": "b536381ffbdfccb68ef28c9a9c44bfe0",
+    "url": "/ggtavern.pub-react/static/media/gg10.b536381f.jpg"
   },
   {
     "revision": "80612c373ee91d8ce856dc59c7850f6f",
@@ -48,8 +44,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ggtavern.pub-react/static/media/gg12.0b715e39.jpg"
   },
   {
-    "revision": "f46ab8ac2e0ca0c8a244afb9b0f83f7d",
-    "url": "/ggtavern.pub-react/static/media/gg13.f46ab8ac.jpg"
+    "revision": "4251bf1b480276984a49d0a8f9e32c68",
+    "url": "/ggtavern.pub-react/static/media/gg13.4251bf1b.jpg"
   },
   {
     "revision": "4b3f5b7ee4f660bf299d09ffc9bb3ae4",
