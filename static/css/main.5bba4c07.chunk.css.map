@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.scss"],"names":[],"mappings":"AAAA,0BAIE,YAAa","file":"main.5bba4c07.chunk.css","sourcesContent":["html,\nbody,\n#root,\n#root > div {\n  height: 100vh;\n}\n"]}
