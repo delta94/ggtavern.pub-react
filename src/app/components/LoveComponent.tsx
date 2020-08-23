@@ -36,7 +36,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function LoveComponent() {
+export default function Love() {
   const classes = useStyles();
   const theme = useTheme();
   const isLarger = useMediaQuery(theme.breakpoints.up('md'));
@@ -47,13 +47,12 @@ export default function LoveComponent() {
         The Tavern is displaced due to Covid, but even though we are isolated
         and masked, we are in this together.
       </p>
-      {isLarger && <GridComponent></GridComponent>}
-      {!isLarger && <MobileComponent></MobileComponent>}
+      {isLarger ? <Desktop /> : <Mobile />}
     </div>
   );
 }
 
-function GridComponent() {
+function Desktop() {
   const classes = useStyles();
 
   return (
@@ -75,7 +74,7 @@ function GridComponent() {
   );
 }
 
-function MobileComponent() {
+function Mobile() {
   const classes = useStyles();
 
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import LoveComponent from './LoveComponent';
+import { Love } from '.';
 
 let container: HTMLDivElement = null;
 beforeEach(() => {
@@ -19,7 +19,7 @@ afterEach(() => {
 
 it('renders', () => {
   act(() => {
-    render(<LoveComponent />, container);
+    render(<Love />, container);
   });
   expect(container).toBeDefined();
 });
