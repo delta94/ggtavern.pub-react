@@ -10,7 +10,7 @@ export default function NavbarComponent() {
   const classes = useStyles();
   return (
     <nav className={classes.root}>
-      <Link to='/home' id='homeImage'>
+      <Link to='/' id='homeImage'>
         <img
           id='gg-img'
           src={logo}
@@ -18,7 +18,8 @@ export default function NavbarComponent() {
           className={classes.img}></img>
       </Link>
       <IconButton
-        to='/home'
+        exact
+        to='/'
         className={classes.navLink}
         activeClassName={classes.active}
         component={NavLink}>

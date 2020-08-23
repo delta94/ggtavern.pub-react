@@ -5,7 +5,7 @@ import NotFoundComponent from 'app/NotFoundComponent';
 
 import { ThemeProvider, CssBaseline } from '@material-ui/core';
 import { darkTheme } from './theme';
-import { Router, Route, Redirect, Switch } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 
 export default function App() {
@@ -16,16 +16,15 @@ export default function App() {
       <Router history={history}>
         <NavbarComponent />
         <Switch>
-          <Route path='/home'>
-            <Love></Love>
-          </Route>
           <Route path='/contact'>
             <Contact></Contact>
           </Route>
           <Route path='/memoriam'>
             <Memoriam></Memoriam>
           </Route>
-          <Redirect exact path='/' to='/home' />
+          <Route path='/'>
+            <Love></Love>
+          </Route>
           <Route path='*'>
             <NotFoundComponent></NotFoundComponent>
           </Route>
