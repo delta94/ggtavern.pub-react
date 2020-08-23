@@ -1,77 +1,99 @@
 import React from 'react';
-import { makeStyles, Button } from '@material-ui/core';
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext,
-} from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
+import { makeStyles, useMediaQuery, useTheme } from '@material-ui/core';
 import MemoriamImage from './memoriam-image';
 import { ImgMap } from './img/imgMap';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     textAlign: 'center',
-    fontFamily: '"Press Start 2P"',
-    height: '100%',
+    height: '80%',
   },
-  carousel: {
-    width: '100%',
-    height: 500,
-  },
-  box: {
+  boxLarge: {
+    lineHeight: 0,
     padding: 10,
-    width: '100%',
+    width: '80%',
     height: 600,
     borderStyle: 'double',
     borderColor: theme.palette.secondary.main,
     borderWidth: 5,
-    margin: '5px auto',
+    margin: '0 auto',
+    textAlign: 'center',
+    columnCount: 7,
+    columnGap: 0,
+    MozColumnCount: 7,
+    MozColumnGap: 0,
+    WebkitColumnCount: 7,
+    WebkitColumnGap: 0,
     '& img': {
       width: '100%',
-      maxWidth: 700,
+      height: 'auto',
     },
   },
-  uglyButton: {
-    backgroundColor: '#303030',
-    border: 'none',
+  boxMed: {
+    lineHeight: 0,
+    padding: 10,
+    width: '80%',
+    height: 600,
+    borderStyle: 'double',
+    borderColor: theme.palette.secondary.main,
+    borderWidth: 5,
+    margin: '0 auto',
+    textAlign: 'center',
+    columnCount: 6,
+    columnGap: 0,
+    MozColumnCount: 6,
+    MozColumnGap: 0,
+    WebkitColumnCount: 6,
+    WebkitColumnGap: 0,
+    '& img': {
+      width: '100%',
+      height: 'auto',
+    },
+  },
+  boxSmall: {
+    lineHeight: 0,
+    padding: 10,
+    width: '80%',
+    height: 600,
+    borderStyle: 'double',
+    borderColor: theme.palette.secondary.main,
+    borderWidth: 5,
+    margin: '0 auto',
+    textAlign: 'center',
+    columnCount: 5,
+    columnGap: 0,
+    MozColumnCount: 5,
+    MozColumnGap: 0,
+    WebkitColumnCount: 5,
+    WebkitColumnGap: 0,
+    '& img': {
+      width: '100%',
+      height: 'auto',
+    },
   },
 }));
 
 export default function Memoriam() {
   const classes = useStyles();
+  const theme = useTheme();
+  const isMed = useMediaQuery(theme.breakpoints.up('md'));
+  const isLarger = useMediaQuery(theme.breakpoints.up('lg'));
+
   return (
     <div className={classes.root}>
-      <h3>This is a place to celebrate the fun to be had at Goblin.</h3>
-      <div className={classes.box}>
-        <CarouselProvider
-          naturalSlideWidth={300}
-          naturalSlideHeight={300}
-          totalSlides={ImgMap.length}
-          infinite
-          className={classes.carousel}>
-          <Slider className={classes.carousel}>
-            {ImgMap.map((img) => {
-              return (
-                <Slide index={img.index}>
-                  <MemoriamImage src={img.src} alt={img.alt} />
-                </Slide>
-              );
-            })}
-          </Slider>
-          <ButtonBack className={classes.uglyButton}>
-            <Button color='primary' variant='contained'>
-              Back
-            </Button>
-          </ButtonBack>
-          <ButtonNext className={classes.uglyButton}>
-            <Button color='primary' variant='contained'>
-              Next
-            </Button>
-          </ButtonNext>
-        </CarouselProvider>
+      <h3>This is a place to celebrate the fun that was had at Goblin.</h3>
+      <p>Click/tap on the images to see them larger.</p>
+      <div
+        className={
+          isLarger
+            ? classes.boxLarge
+            : isMed
+            ? classes.boxMed
+            : classes.boxSmall
+        }>
+        {ImgMap.map((img) => {
+          return <MemoriamImage key={img.index} src={img.src} alt={img.alt} />;
+        })}
       </div>
     </div>
   );

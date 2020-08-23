@@ -1,3 +1,4 @@
+import ggmask from 'assets/ggMask.jpg';
 import gg1 from './gg1.jpg';
 import gg2 from './gg2.jpg';
 import gg3 from './gg3.jpg';
@@ -16,6 +17,7 @@ import gg19 from './gg19.jpg';
 import gg20 from './gg20.jpg';
 
 export const ImgMap = [
+    { index: 0, src: ggmask, alt: 'ict gg mask' },
     { index: 1, src: gg1, alt: 'jack-in-the-box Thursday' },
     { index: 2, src: gg2, alt: 'grumpy' },
     { index: 3, src: gg3, alt: 'america\'s booze' },
