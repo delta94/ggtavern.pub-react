@@ -9,7 +9,6 @@ import {
 } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import MemoriamImage from './memoriam-image';
-import mask from 'assets/ggMask.jpg';
 import { ImgMap } from './img/imgMap';
 
 const useStyles = makeStyles((theme) => ({
@@ -25,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   box: {
     padding: 10,
     width: '100%',
-    height: '100%',
+    height: 600,
     borderStyle: 'double',
     borderColor: theme.palette.secondary.main,
     borderWidth: 5,
