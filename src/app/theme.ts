@@ -10,6 +10,7 @@ export const darkTheme = createMuiTheme({
     },
     type: 'dark',
   },
+
 });
 
 darkTheme.overrides = {

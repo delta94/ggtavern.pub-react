@@ -1,7 +1,6 @@
 import React from 'react';
 import NavbarComponent from 'app/core/NavbarComponent';
-import ContactComponent from 'app/components/ContactComponent';
-import LoveComponent from 'app/components/LoveComponent';
+import { Contact, Love, Memoriam } from 'app/components';
 import NotFoundComponent from 'app/NotFoundComponent';
 
 import { ThemeProvider, CssBaseline } from '@material-ui/core';
@@ -18,10 +17,13 @@ export default function App() {
         <NavbarComponent />
         <Switch>
           <Route path='/home'>
-            <LoveComponent></LoveComponent>
+            <Love></Love>
           </Route>
           <Route path='/contact'>
-            <ContactComponent></ContactComponent>
+            <Contact></Contact>
+          </Route>
+          <Route path='/memoriam'>
+            <Memoriam></Memoriam>
           </Route>
           <Redirect exact path='/' to='/home' />
           <Route path='*'>

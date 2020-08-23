@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import { Contact } from '.';
+import Memoriam from './memoriam';
 
 let container: HTMLDivElement = null;
 beforeEach(() => {
@@ -19,7 +19,7 @@ afterEach(() => {
 
 it('renders', () => {
   act(() => {
-    render(<Contact />, container);
+    render(<Memoriam />, container);
   });
   expect(container).toBeDefined();
 });

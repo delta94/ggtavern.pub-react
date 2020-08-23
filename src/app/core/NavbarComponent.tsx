@@ -31,6 +31,13 @@ export default function NavbarComponent() {
         component={NavLink}>
         Contact Us
       </Button>
+      <Button
+        to='/memoriam'
+        className={classes.navLink}
+        activeClassName={classes.active}
+        component={NavLink}>
+        In Memoriam
+      </Button>
     </nav>
   );
 }
