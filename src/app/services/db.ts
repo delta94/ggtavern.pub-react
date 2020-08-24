@@ -1,3 +1,5 @@
+// This file is to wrap the Firebase dependency.
+// This allows Firebase to be swapped out easily in one file.
 import { getItemsfromFirestore, getItemswithIDfromFirestore } from 'app/services/firebase';
 import { ID } from 'app/models/id.model';
 
