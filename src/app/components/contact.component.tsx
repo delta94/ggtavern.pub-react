@@ -31,7 +31,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Contact() {
+export const Contact = () => {
   const classes = useStyles();
   useTitle('GGTavern - Contact');
 
@@ -106,4 +106,4 @@ export default function Contact() {
       </Card>
     </div>
   );
-}
+};

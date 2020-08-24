@@ -37,7 +37,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Love() {
+export const Love = () => {
   const classes = useStyles();
   const theme = useTheme();
   const isLarger = useMediaQuery(theme.breakpoints.up('md'));
@@ -52,7 +52,7 @@ export default function Love() {
       {isLarger ? <Desktop /> : <Mobile />}
     </div>
   );
-}
+};
 
 function Desktop() {
   const classes = useStyles();
