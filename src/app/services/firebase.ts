@@ -24,7 +24,7 @@ export const loginAnon = async (): Promise<firebase.auth.UserCredential> => {
  * Gets all documents' data on the path specified. Does not retrieve sub-collections.
  * @param queryPath document path for location to query
  */
-export const getItems = async <T>(queryPath: string): Promise<T[]> => {
+export const getItemsfromFirestore = async <T>(queryPath: string): Promise<T[]> => {
     let items: T[] = [];
     try {
         const collection = await db.collection(queryPath).get();
@@ -44,7 +44,7 @@ export const getItems = async <T>(queryPath: string): Promise<T[]> => {
  * Gets all documents' data on the path specified. Does not retrieve sub-collections.
  * @param queryPath document path for location to query
  */
-export const getItemswithID = async <T extends ID>(queryPath: string): Promise<T[]> => {
+export const getItemswithIDfromFirestore = async <T extends ID>(queryPath: string): Promise<T[]> => {
     let items: T[] = [];
     try {
         const collection = await db.collection(queryPath).get();
