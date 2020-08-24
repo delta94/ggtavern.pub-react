@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import Navbar from './NavbarComponent';
+import { NavbarComponent } from './navbar.component';
 import { MemoryRouter } from 'react-router-dom';
 
 let container: HTMLDivElement = null;
@@ -23,7 +23,7 @@ it('renders', () => {
     render(
       <>
         <MemoryRouter>
-          <Navbar />
+          <NavbarComponent />
         </MemoryRouter>
       </>,
       container

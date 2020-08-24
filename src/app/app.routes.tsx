@@ -1,9 +1,14 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import { Contact, Love, Memoriam, Games } from 'app/components';
-import { NotFoundComponent } from 'app/notFound.component';
-import { UnderConstruction } from 'app/shared/components/underConstruction.component';
+import {
+  Contact,
+  Love,
+  Memoriam,
+  Games,
+  UnderConstruction,
+  NotFoundComponent,
+} from 'app/components';
 
 export const AppRoutes = () => {
   return (

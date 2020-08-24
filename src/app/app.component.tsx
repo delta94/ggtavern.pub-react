@@ -1,11 +1,11 @@
 import React from 'react';
-import NavbarComponent from 'app/core/NavbarComponent';
 
 import { ThemeProvider, CssBaseline } from '@material-ui/core';
 import { darkTheme } from './theme';
-import { Router } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 
+import { Router } from 'react-router-dom';
+import { NavbarComponent } from 'app/navbar.component';
 import { AppRoutes } from './app.routes';
 
 export default function App() {

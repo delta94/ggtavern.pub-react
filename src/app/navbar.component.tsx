@@ -7,9 +7,9 @@ import firebase from 'firebase';
 
 import { useAuth } from 'app/hooks/useAuth.hook';
 
-import useStyles from './NavbarStyles';
+import useStyles from './navbar.styles';
 
-export default function NavbarComponent() {
+export const NavbarComponent = () => {
   const classes = useStyles();
 
   const user = useAuth();
@@ -51,7 +51,7 @@ export default function NavbarComponent() {
       )}
     </nav>
   );
-}
+};
 
 const signOut = () => {
   firebase.auth().signOut();
