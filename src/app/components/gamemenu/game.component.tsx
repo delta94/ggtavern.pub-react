@@ -22,9 +22,11 @@ export const Games = () => {
   const classes = useStyles();
 
   useEffect(() => {
-    getSystems().then((systems) => {
-      setSystemList(systems);
-    });
+    getSystems()
+      .then((systems) => {
+        setSystemList(systems);
+      })
+      .catch((err) => console.error(err));
   }, []);
 
   return (

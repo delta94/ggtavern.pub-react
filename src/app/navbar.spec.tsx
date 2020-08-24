@@ -1,33 +1,14 @@
 import React from 'react';
-import { render, unmountComponentAtNode } from 'react-dom';
-import { act } from 'react-dom/test-utils';
+import { render } from '@testing-library/react';
 import { NavbarComponent } from './navbar.component';
 import { MemoryRouter } from 'react-router-dom';
 
-let container: HTMLDivElement = null;
-beforeEach(() => {
-  // setup a DOM element as a render target
-  container = document.createElement('div');
-  document.body.appendChild(container);
-});
-
-afterEach(() => {
-  // cleanup on exiting
-  unmountComponentAtNode(container);
-  container.remove();
-  container = null;
-});
-
 it('renders', () => {
-  act(() => {
-    render(
-      <>
-        <MemoryRouter>
-          <NavbarComponent />
-        </MemoryRouter>
-      </>,
-      container
-    );
-  });
-  expect(container).toBeDefined();
+  render(
+    <>
+      <MemoryRouter>
+        <NavbarComponent />
+      </MemoryRouter>
+    </>
+  );
 });

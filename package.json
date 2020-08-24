@@ -57,7 +57,8 @@
       "!**/coverage/**",
       "!**/serviceWorker.ts",
       "!**/*.d.ts",
-      "!**/index.ts"
+      "!**/index.ts",
+      "!**/index.tsx"
     ],
     "coverageThreshold": {
       "global": {
