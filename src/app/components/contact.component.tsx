@@ -8,6 +8,7 @@ import fbIcon from 'assets/facebook.png';
 import discordIcon from 'assets/discord.png';
 import youtubeIcon from 'assets/youtube.png';
 import instaIcon from 'assets/insta.png';
+import { useTitle } from 'app/hooks/useTitle.hook';
 
 const useStyles = makeStyles({
   root: {
@@ -32,6 +33,8 @@ const useStyles = makeStyles({
 
 export default function Contact() {
   const classes = useStyles();
+  useTitle('GGTavern - Contact');
+
   return (
     <div className={classes.root}>
       <Card className={classes.card}>

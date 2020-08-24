@@ -18,5 +18,10 @@ darkTheme.overrides = {
     root: {
       color: darkTheme.palette.primary.main,
     }
+  },
+  MuiButton: {
+    root: {
+      textTransform: 'initial'
+    }
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import UnderConstruction from './UnderConstruction';
+import { UnderConstruction } from './underConstruction.component';
 
 let container: HTMLDivElement = null;
 beforeEach(() => {

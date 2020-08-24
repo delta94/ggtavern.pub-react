@@ -1,10 +1,10 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from './App';
+import App from './app.component';
 import { unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 
-let container: HTMLDivElement = null;
+let container: HTMLDivElement;
 beforeEach(() => {
   // setup a DOM element as a render target
   container = document.createElement('div');
@@ -15,7 +15,6 @@ afterEach(() => {
   // cleanup on exiting
   unmountComponentAtNode(container);
   container.remove();
-  container = null;
 });
 
 test('renders', () => {

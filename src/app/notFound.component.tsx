@@ -15,7 +15,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function NotFoundComponent() {
+export const NotFoundComponent = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -36,4 +36,4 @@ export default function NotFoundComponent() {
       <img className={classes.img} alt='404 Error: Not Found' src={image} />
     </div>
   );
-}
+};

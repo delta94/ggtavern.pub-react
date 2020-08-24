@@ -1,3 +1,3 @@
-export { default as Contact } from './ContactComponent';
-export { default as Love } from './LoveComponent';
-export { default as Memoriam } from './memoriam/memoriam';
+export { default as Contact } from './contact.component';
+export { default as Love } from './love.component';
+export { default as Memoriam } from './memoriam/memoriam.component';
