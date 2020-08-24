@@ -1,8 +1,6 @@
-import React from 'react';
-import clsx from 'clsx';
+import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
@@ -20,18 +18,19 @@ const useStyles = makeStyles({
   },
 });
 
-type Anchor = 'top' | 'left' | 'bottom' | 'right';
-
-export const TemporaryDrawer = () => {
+export const GameDrawer = (props: {
+  show: boolean;
+  updateShow: (show: boolean) => void;
+}) => {
   const classes = useStyles();
-  const [state, setState] = React.useState({
-    top: false,
-    left: false,
-    bottom: false,
-    right: false,
-  });
+  const [show, setShow] = React.useState(false);
 
-  const toggleDrawer = (anchor: Anchor, open: boolean) => (
+  useEffect(() => {
+    console.log(props.show);
+    setShow(props.show);
+  }, [props.show]);
+
+  const toggleDrawer = (open: boolean) => (
     event: React.KeyboardEvent | React.MouseEvent
   ) => {
     if (
@@ -42,17 +41,16 @@ export const TemporaryDrawer = () => {
       return;
     }
 
-    setState({ ...state, [anchor]: open });
+    setShow(open);
+    props.updateShow(open);
   };
 
-  const list = (anchor: Anchor) => (
+  const list = () => (
     <div
-      className={clsx(classes.list, {
-        [classes.fullList]: anchor === 'top' || anchor === 'bottom',
-      })}
+      className={classes.list}
       role='presentation'
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}>
+      onClick={toggleDrawer(false)}
+      onKeyDown={toggleDrawer(false)}>
       <List>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem button key={text}>
@@ -79,14 +77,11 @@ export const TemporaryDrawer = () => {
 
   return (
     <div>
-      {(['left', 'right', 'top', 'bottom'] as Anchor[]).map((anchor) => (
-        <Drawer
-          anchor={anchor}
-          open={state[anchor]}
-          onClose={toggleDrawer(anchor, false)}>
-          {list(anchor)}
+      {
+        <Drawer anchor='left' open={show} onClose={toggleDrawer(false)}>
+          {list()}
         </Drawer>
-      ))}
+      }
     </div>
   );
 };
