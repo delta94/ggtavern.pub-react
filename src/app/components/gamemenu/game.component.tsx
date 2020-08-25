@@ -7,6 +7,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { useTitle } from 'app/hooks/useTitle.hook';
 import { GameSystem } from './game.model';
 import { getItems, sortItems } from 'app/services';
+import { useSnackbar } from 'notistack';
 
 const useStyles = makeStyles({
   sysName: {
@@ -20,14 +21,19 @@ export const Games = () => {
   const [systemList, setSystemList] = useState<GameSystem[]>();
   const [currentSystem, setcurrentSystem] = useState<GameSystem>();
   const classes = useStyles();
+  const { enqueueSnackbar } = useSnackbar();
 
   useEffect(() => {
     getSystems()
       .then((systems) => {
         setSystemList(systems);
+        enqueueSnackbar('Retrieved games', { variant: 'success' });
       })
-      .catch((err) => console.error(err));
-  }, []);
+      .catch((err) => {
+        console.error(err);
+        enqueueSnackbar('Error retrieving games', { variant: 'error' });
+      });
+  }, [enqueueSnackbar]);
 
   return (
     <>

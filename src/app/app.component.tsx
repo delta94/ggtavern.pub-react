@@ -7,6 +7,7 @@ import { createBrowserHistory } from 'history';
 import { Router } from 'react-router-dom';
 import { NavbarComponent } from 'app/navbar.component';
 import { AppRoutes } from './app.routes';
+import { SnackbarProvider } from 'notistack';
 
 export default function App() {
   const history = createBrowserHistory({ basename: process.env.PUBLIC_URL });
@@ -14,10 +15,12 @@ export default function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <Router history={history}>
-        <NavbarComponent />
-        <AppRoutes />
-      </Router>
+      <SnackbarProvider maxSnack={2}>
+        <Router history={history}>
+          <NavbarComponent />
+          <AppRoutes />
+        </Router>
+      </SnackbarProvider>
     </ThemeProvider>
   );
 }
