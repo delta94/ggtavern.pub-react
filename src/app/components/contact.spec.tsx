@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { Memoriam } from './memoriam.component';
+import { Contact } from './contact.component';
 
 test('renders', () => {
-  render(<Memoriam />);
+  render(<Contact />);
 });

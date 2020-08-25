@@ -3,11 +3,17 @@ import { Link, NavLink } from 'react-router-dom';
 import logo from 'assets/ggTavern.png';
 import { Button, IconButton } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
+import firebase from 'firebase';
 
-import useStyles from './NavbarStyles';
+import { useAuth } from 'app/hooks/useAuth.hook';
 
-export default function NavbarComponent() {
+import useStyles from './navbar.styles';
+
+export const NavbarComponent = () => {
   const classes = useStyles();
+
+  const user = useAuth();
+
   return (
     <nav className={classes.root}>
       <Link to='/' id='homeImage'>
@@ -39,6 +45,14 @@ export default function NavbarComponent() {
         component={NavLink}>
         In Memoriam
       </Button>
+      <div className='filler' />
+      {user?.isAnonymous === false && (
+        <Button onClick={signOut}>Sign Out</Button>
+      )}
     </nav>
   );
-}
+};
+
+const signOut = () => {
+  firebase.auth().signOut();
+};

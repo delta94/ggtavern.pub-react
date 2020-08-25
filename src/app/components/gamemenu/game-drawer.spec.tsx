@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { Memoriam } from './memoriam.component';
+import { GameDrawer } from './game-drawer.component';
 
 test('renders', () => {
-  render(<Memoriam />);
+  render(<GameDrawer />);
 });

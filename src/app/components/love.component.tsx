@@ -3,6 +3,7 @@ import maskImg from 'assets/ggMask.jpg';
 import { makeStyles } from '@material-ui/core';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
+import { useTitle } from 'app/hooks/useTitle.hook';
 
 const useStyles = makeStyles({
   root: {
@@ -36,10 +37,11 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Love() {
+export const Love = () => {
   const classes = useStyles();
   const theme = useTheme();
   const isLarger = useMediaQuery(theme.breakpoints.up('md'));
+  useTitle('GGTavern');
   return (
     <div className={classes.root}>
       <h1 className={classes.old}>Grinning Goblin Gaming Tavern</h1>
@@ -50,7 +52,7 @@ export default function Love() {
       {isLarger ? <Desktop /> : <Mobile />}
     </div>
   );
-}
+};
 
 function Desktop() {
   const classes = useStyles();

@@ -69,11 +69,11 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MemoriamImage(props: {
+export const MemoriamImage = (props: {
   src: any;
   alt: string;
   description?: string;
-}) {
+}) => {
   const classes = useStyles();
   const [modal, setModal] = useState(false);
 
@@ -96,4 +96,4 @@ export default function MemoriamImage(props: {
       </div>
     </>
   );
-}
+};

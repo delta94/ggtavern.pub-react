@@ -9,11 +9,11 @@ const useStyles = makeStyles({
   },
 });
 
-export default function UnderConstructionComponent(props: { title?: string }) {
+export const UnderConstruction = (props: { title?: string }) => {
   const classes = useStyles();
   return (
     <div className={classes.container}>
-      <h2>{props?.title}</h2>
+      <h2 data-testid='title'>{props?.title}</h2>
       <h3>This page is currently under construction.</h3>
       <img
         id='imgUnderConstruction'
@@ -23,4 +23,4 @@ export default function UnderConstructionComponent(props: { title?: string }) {
       />
     </div>
   );
-}
+};

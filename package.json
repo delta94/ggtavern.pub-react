@@ -57,14 +57,15 @@
       "!**/coverage/**",
       "!**/serviceWorker.ts",
       "!**/*.d.ts",
-      "!**/index.ts"
+      "!**/index.ts",
+      "!**/index.tsx"
     ],
     "coverageThreshold": {
       "global": {
-        "branches": 30,
-        "functions": 30,
-        "lines": 30,
-        "statements": 30
+        "branches": 15,
+        "functions": 15,
+        "lines": 15,
+        "statements": 15
       }
     }
   }

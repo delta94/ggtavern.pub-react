@@ -1,3 +1,6 @@
-export { default as Contact } from './ContactComponent';
-export { default as Love } from './LoveComponent';
-export { default as Memoriam } from './memoriam/memoriam';
+export * from './gamemenu/game.component';
+export * from './memoriam/memoriam.component';
+export * from './contact.component';
+export * from './love.component';
+export * from './notFound.component';
+export * from './underConstruction.component'

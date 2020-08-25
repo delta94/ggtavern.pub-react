@@ -1,7 +1,8 @@
 import React from 'react';
 import { makeStyles, useMediaQuery, useTheme } from '@material-ui/core';
-import MemoriamImage from './memoriam-image';
+import { MemoriamImage } from './memoriam-image.component';
 import { ImgMap } from './img/imgMap';
+import { useTitle } from 'app/hooks/useTitle.hook';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -73,11 +74,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Memoriam() {
+export const Memoriam = () => {
   const classes = useStyles();
   const theme = useTheme();
   const isMed = useMediaQuery(theme.breakpoints.up('md'));
   const isLarger = useMediaQuery(theme.breakpoints.up('lg'));
+  useTitle('GGTavern - In Memoriam');
 
   return (
     <div className={classes.root}>
@@ -97,4 +99,4 @@ export default function Memoriam() {
       </div>
     </div>
   );
-}
+};
