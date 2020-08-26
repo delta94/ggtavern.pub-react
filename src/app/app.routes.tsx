@@ -6,7 +6,7 @@ import {
   Love,
   Memoriam,
   Games,
-  UnderConstruction,
+  Foods,
   NotFoundComponent,
 } from 'app/components';
 
@@ -20,7 +20,7 @@ export const AppRoutes = () => {
         <Memoriam />
       </Route>
       <Route path='/food'>
-        <UnderConstruction title='Food Menu' />
+        <Foods />
       </Route>
       <Route path='/games'>
         <Games />
