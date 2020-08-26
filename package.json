@@ -2,7 +2,7 @@
   "name": "ggtavern.pub-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "",
+  "homepage": "ggtavern.herokuapp.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
