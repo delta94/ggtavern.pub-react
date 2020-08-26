@@ -25,7 +25,7 @@ export const AppRoutes = () => {
       <Route path='/games'>
         <Games />
       </Route>
-      <Route path='/'>
+      <Route path='/' exact>
         <Love />
       </Route>
       <Route path='*'>
