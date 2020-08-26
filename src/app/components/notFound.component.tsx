@@ -28,7 +28,7 @@ export const NotFoundComponent = () => {
       </p>
       <p>
         You can head back{' '}
-        <Link to='/home' component={NavLink}>
+        <Link to='/' component={NavLink}>
           home
         </Link>{' '}
         if you want to avoid being dinner.
